@@ -1,11 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-
-const links = [
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'About', href: '#about' },
-];
+import { navigationLinks } from '../../constants/portfolio.constants';
 
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +31,7 @@ export const NavBar = () => {
             id="portfolioNavigation"
           >
             <div className="navbar-nav ms-auto align-items-md-center gap-md-2">
-              {links.map((link) => (
+              {navigationLinks.map((link) => (
                 <a
                   className="nav-link portfolio-nav-link"
                   key={link.href}

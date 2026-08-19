@@ -1,22 +1,5 @@
-import { Download, ExternalLink, Mail } from 'lucide-react';
-
-const contactLinks = [
-	{
-		label: 'LinkedIn',
-		href: 'https://www.linkedin.com/in/jacob-blenis-006251237/',
-		icon: ExternalLink,
-	},
-	{
-		label: 'GitHub',
-		href: 'https://github.com/Blenisj',
-		icon: ExternalLink,
-	},
-	{
-		label: 'Email',
-		href: 'mailto:hello@example.com',
-		icon: Mail,
-	},
-];
+import { Download } from 'lucide-react';
+import { contactLinks } from '../../constants/portfolio.constants';
 
 export const Contact = () => (
 	<section className="portfolio-section container py-5" id="contact" aria-labelledby="contact-heading">

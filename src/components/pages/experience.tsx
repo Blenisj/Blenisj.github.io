@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import { experiences } from '../../constants/experience.constants';
+import { experiences } from '../../constants/portfolio.constants';
 import { ExperienceModal } from '../modals/experience-modal';
 import '../../styles/experience.css';
 

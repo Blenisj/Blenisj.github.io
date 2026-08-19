@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import type { ComponentType } from 'react';
 import MarqueeModule, { type MarqueeProps } from 'react-fast-marquee';
 import { AboutModal } from '../modals/about-modal';
+import { interests } from '../../constants/portfolio.constants';
 
 const marqueeExport = MarqueeModule as unknown as ComponentType<MarqueeProps> & {
   default?: ComponentType<MarqueeProps>;
@@ -12,29 +13,6 @@ const Marquee = marqueeExport.default ?? marqueeExport;
 
 export const About = () => {
   const [selectedInterest, setSelectedInterest] = useState<string | null>(null);
-  const interests = [ 
-    {
-      image: "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=600",
-      name: "Powerlifting",
-      text: "Competed on the UC powerlifitng team for several years. still an avid lifter and intend to keep competing for the foreseeable future"
-    },
-    {
-      image: "https://images.pexels.com/photos/1080213/pexels-photo-1080213.jpeg?auto=compress&cs=tinysrgb&w=600",
-      name: "Music",
-      text: "ive been playing guitar for years and love to mess around in DAWs to record my own songs"
-    },
-    {
-      image: "https://images.pexels.com/photos/2773977/pexels-photo-2773977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      name: "Warhammer 40k",
-      text: "to let out my inner nerd i love to play Warhammer 40k."
-    },
-    {
-      image: "https://images.pexels.com/photos/810775/pexels-photo-810775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      name: "not sure",
-      text: "blah blah blah."
-    },
-    
-  ];
 
   return (
     <section className="about-section portfolio-section" id="about" aria-label="About me">

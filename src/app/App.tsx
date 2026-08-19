@@ -1,9 +1,13 @@
+import { GradientBackground } from '../components/background/gradient-background';
 import { NavBar } from '../components/layout/navbar';
 
 export default function App() {
   return (
+    <>
+    <GradientBackground />
     <main id="top" className="portfolio-shell text-light">
-      <NavBar />
+
+    <NavBar />
 
       <section className="portfolio-hero container d-flex align-items-center py-5">
         <div className="row w-100">
@@ -56,5 +60,6 @@ export default function App() {
         </div>
       </section>
     </main>
+    </>
   );
 }

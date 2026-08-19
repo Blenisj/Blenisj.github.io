@@ -16,8 +16,40 @@ body {
   margin: 0;
 }
 
+.gradient-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.gradient-background::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #000;
+  content: '';
+  opacity: 1;
+  pointer-events: none;
+  animation: gradient-reveal 3s ease-in forwards;
+
+}
+
+@keyframes gradient-reveal {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 .portfolio-shell {
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .portfolio-hero {

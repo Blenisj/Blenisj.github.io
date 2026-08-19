@@ -4,14 +4,15 @@ A React portfolio website scaffold for presenting personal information, professi
 
 ## Current Status
 
-This repository is currently the starting scaffold for the portfolio. The main page and layout component files have been created, but they do not contain UI implementation yet. The Vite scripts and frontend dependencies are configured for development.
+This repository contains the initial portfolio page, responsive navigation, and Bootstrap-based styling. The Vite scripts and frontend dependencies are configured for development.
 
 ## Tech Stack
 
 - React
-- TSX component files (TypeScript tooling is not configured yet)
+- TypeScript and TSX
 - Vite
-- Tailwind CSS `4.3.3` for responsive styling and UI utilities
+- Bootstrap `5.3` for responsive styling and UI utilities
+- MUI for the responsive navbar component
 - Lucide React for icons
 - ESLint for code quality checks
 
@@ -23,16 +24,11 @@ This repository is currently the starting scaffold for the portfolio. The main p
 ├── package-lock.json
 ├── README.md
 ├── src/
+│   ├── app/App.tsx             # Main portfolio page
 │   ├── assets/                 # Images and other static assets
-│   └── components/
-│       ├── layout/
-│       │   ├── footer.tsx      # Shared footer component
-│       │   └── navbar.tsx      # Shared navigation component
-│       └── pages/
-│           ├── about.tsx       # About page
-│           ├── experience.tsx  # Experience page
-│           ├── home.tsx        # Home page
-│           └── projects.tsx    # Projects page
+│   ├── components/layout/
+│   │   └── navbar.tsx          # Responsive navigation
+│   └── styles/globals.css      # Custom theme styles
 └── tests/                      # Reserved for automated tests
 ```
 
@@ -71,16 +67,10 @@ Vite will print the local URL in the terminal.
 
 ## Styling
 
-Tailwind CSS is configured through the Vite plugin. Import the project stylesheet from the application entry point when the app is wired up:
+Bootstrap is imported by the application entry point:
 
 ```tsx
-import "./index.css";
-```
-
-The stylesheet imports Tailwind with:
-
-```css
-@import "tailwindcss";
+import "bootstrap/dist/css/bootstrap.min.css";
 ```
 
 ## Planned Portfolio Sections
@@ -95,4 +85,4 @@ The stylesheet imports Tailwind with:
 
 - The package is private and is not configured for npm publishing.
 - The `tests/` directory is present but currently empty.
-- An application entry point and `index.html` still need to be added before the portfolio can be run as a complete website.
+- The application entry point is `src/main.tsx` and loads `src/styles/globals.css`.

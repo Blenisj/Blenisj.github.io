@@ -1,14 +1,12 @@
 import { GradientBackground } from '../components/background/gradient-background';
-import { NavBar } from '../components/layout/navbar';
+import { NavBar } from '../components/layout/navbar.tsx';
 
 export default function App() {
   return (
     <>
     <GradientBackground />
     <main id="top" className="portfolio-shell text-light">
-
     <NavBar />
-
       <section className="portfolio-hero container d-flex align-items-center py-5">
         <div className="row w-100">
           <div className="col-lg-8">

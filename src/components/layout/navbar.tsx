@@ -1,10 +1,6 @@
-import { useEffect, useState } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import brandMark from '../../assets/brand-mark.svg';
 
 const links = [
   { label: 'About', href: '#about' },
@@ -12,123 +8,57 @@ const links = [
   { label: 'Projects', href: '#projects' },
 ];
 
-const actionButtonSx = {
-  backgroundColor: 'var(--portfolio-accent)',
-  color: 'var(--portfolio-background)',
-  textTransform: 'none',
-  '&:hover': { backgroundColor: '#ff7777' },
-};
-
 export function NavBar() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 32);
-
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <AppBar
-      position="fixed"
-      elevation={0}
-      className="portfolio-navbar"
-      sx={{
-        alignItems: 'center',
-        backgroundColor: 'transparent',
-        backgroundImage: 'none',
-        boxShadow: 'none',
-        pointerEvents: 'none',
-        top: isScrolled ? 8 : 24,
-        transition: 'top 250ms ease',
-      }}
-    >
-      <Box
-        className="portfolio-navbar-surface"
-        sx={{
-          alignItems: 'center',
-          display: 'flex',
-          gap: 2,
-          justifyContent: 'center',
-          pointerEvents: 'auto',
-          width: 'fit-content',
-        }}
-      >
-        <Button
-          href="#top"
-          onClick={closeMenu}
-          sx={{
-            color: '#f1f5f9',
-            fontSize: isScrolled ? '1rem' : '1.25rem',
-            fontWeight: 700,
-            minWidth: 0,
-            p: 0,
-            textTransform: 'none',
-            transition: 'font-size 250ms ease',
-          }}
-        >
-          Blenis.
-        </Button>
+    <header className="portfolio-navbar fixed-top">
+      <nav className="navbar navbar-expand-md portfolio-navbar-bar">
+        <div className="container-fluid px-4 px-lg-5">
+          <a className="navbar-brand d-flex align-items-center gap-2 portfolio-brand" href="#top" onClick={closeMenu}>
+            <img className="portfolio-brand-image" src={brandMark} alt="" />
+            <span>Blenis.</span>
+          </a>
 
-        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1, alignItems: 'center' }}>
-          {links.map((link) => (
-            <Button
-              key={link.href}
-              href={link.href}
-              sx={{ color: 'var(--portfolio-muted)', textTransform: 'none' }}
-            >
-              {link.label}
-            </Button>
-          ))}
-          <Button href="mailto:hello@example.com" variant="contained" sx={actionButtonSx}>
-            Get in touch
-          </Button>
-        </Box>
+          <button
+            className="navbar-toggler portfolio-toggler"
+            type="button"
+            aria-controls="portfolioNavigation"
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            onClick={() => setIsMenuOpen((open) => !open)}
+          >
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
 
-        <IconButton
-          aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-          onClick={() => setIsMenuOpen((open) => !open)}
-          sx={{ color: '#f1f5f9', display: { xs: 'inline-flex', md: 'none' } }}
-        >
-          {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
-        </IconButton>
-      </Box>
-
-      <Drawer
-        anchor="top"
-        open={isMenuOpen}
-        onClose={closeMenu}
-        slotProps={{
-          paper: {
-            sx: {
-              backgroundColor: 'var(--portfolio-background)',
-              color: '#f1f5f9',
-              mt: isScrolled ? 8 : 13,
-            },
-          },
-        }}
-      >
-        <Box sx={{ display: 'grid', gap: 1, p: 3 }}>
-          {links.map((link) => (
-            <Button
-              key={link.href}
-              href={link.href}
-              onClick={closeMenu}
-              sx={{ color: 'var(--portfolio-muted)', justifyContent: 'flex-start', textTransform: 'none' }}
-            >
-              {link.label}
-            </Button>
-          ))}
-          <Button href="mailto:hello@example.com" onClick={closeMenu} variant="contained" sx={actionButtonSx}>
-            Get in touch
-          </Button>
-        </Box>
-      </Drawer>
-    </AppBar>
+          <div
+            className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}
+            id="portfolioNavigation"
+          >
+            <div className="navbar-nav ms-auto align-items-md-center gap-md-2">
+              {links.map((link) => (
+                <a
+                  className="nav-link portfolio-nav-link"
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMenu}
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                className="btn portfolio-primary rounded-pill px-4"
+                href="mailto:hello@example.com"
+                onClick={closeMenu}
+              >
+                Get in touch
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }

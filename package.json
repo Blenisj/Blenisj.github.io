@@ -20,6 +20,7 @@
     "lucide-react": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-fast-marquee": "^1.6.5",
     "three": "^0.185.1",
     "three-stdlib": "^2.36.1",
     "vite": "latest"

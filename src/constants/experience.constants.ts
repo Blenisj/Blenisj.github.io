@@ -25,12 +25,4 @@ export const experiences: ExperienceItem[] = [
     organization: 'Kinetic Vision',
     description: '● Developed immersive VR applications in Unity Engine, recreating physical environments and interactive systems. ● Built custom object manipulation, 3D annotation, and spatial measurement tools within VR. ● Collaborated directly with clients to gather requirements, communicate progress and ensure project quality. ● Architected and implemented feature sets for internal and production web applications. ● Participated in Agile development workflows using git-based source control and Jira issue tracking.',
   },
-  {
-    id: 'experience-4',
-    image: '/pf_image.JPG',
-    period: '2022 - 2024',
-    role: 'Another role or title',
-    organization: 'Company or organization',
-    description: 'Add another position, internship, class project, volunteer role, or leadership experience.',
-  },
 ];

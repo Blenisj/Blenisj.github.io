@@ -73,7 +73,7 @@
 }
 
 .experience-content {
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 }
 
 .experience-card {
@@ -82,6 +82,24 @@
   border-radius: 6px;
   background: rgb(206 208 206 / 10%);
   text-align: left;
+}
+
+@keyframes experience-card-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(75%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.experience-card-reveal {
+  animation: experience-card-slide-in linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
 }
 
 .experience-image {
@@ -112,7 +130,15 @@
   }
 
   .experience-content {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card-reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }
 

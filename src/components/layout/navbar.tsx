@@ -9,7 +9,7 @@ export const NavBar = () => {
 
   return (
     <header className="position-fixed top-0 start-50 translate-middle-x mt-3 z-3">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-50 border border-secondary rounded-pill shadow px-3">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 border border-secondary rounded-pill shadow px-3">
         <div className="container-fluid">
           <a className="navbar-brand fw-bold me-lg-5 text-light" href="#top" onClick={closeMenu}>
             <span>Blenis</span>

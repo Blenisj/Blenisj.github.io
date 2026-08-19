@@ -5,9 +5,23 @@ import { Contact } from '../components/pages/contact';
 import { Experience } from '../components/pages/experience';
 import { Home } from '../components/pages/home';
 import { Projects } from '../components/pages/projects';
+import { ProjectDetails } from '../components/pages/project-details';
 import { SkillsAndTools } from '../components/pages/skillsAndTools';
+import { projects } from '../constants/portfolio.constants';
 
 export default function App() {
+  const projectSlug = window.location.pathname.match(/^\/projects\/([^/]+)\/?$/)?.[1];
+  const selectedProject = projects.find((project) => project.slug === projectSlug);
+
+  if (selectedProject) {
+    return (
+      <>
+        <GradientBackground />
+        <ProjectDetails project={selectedProject} />
+      </>
+    );
+  }
+
   return (
     <>
     <GradientBackground />

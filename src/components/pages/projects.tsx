@@ -1,23 +1,5 @@
-const projects = [
-	{
-		title: 'Project name',
-		description: 'Explain what you built, who it was for, and the problem it helped solve.',
-		technologies: 'React, TypeScript, CSS',
-		link: '#',
-	},
-	{
-		title: 'Another project name',
-		description: 'Add a second project description and mention the most interesting part of the work.',
-		technologies: 'Technology, Technology, Technology',
-		link: '#',
-	},
-	{
-		title: 'A third project name',
-		description: 'Use this card for another project, class assignment, experiment, or case study.',
-		technologies: 'Technology, Technology',
-		link: '#',
-	},
-];
+import { ArrowUpRight } from 'lucide-react';
+import { projects } from '../../constants/portfolio.constants';
 
 export const Projects = () => {
 	return (
@@ -35,8 +17,11 @@ export const Projects = () => {
 								<article className="portfolio-project h-100">
 									<h3 className="fs-4 fw-semibold">{project.title}</h3>
 									<p className="portfolio-copy">{project.description}</p>
-									<p className="portfolio-accent small mb-4">{project.technologies}</p>
-									<a className="portfolio-link" href={project.link}>View project &rarr;</a>
+										<p className="portfolio-accent small mb-4">{project.technologies.join(' · ')}</p>
+									<a className="portfolio-link d-inline-flex align-items-center gap-2" href={`/projects/${project.slug}`}>
+											View project
+											<ArrowUpRight size={16} aria-hidden="true" />
+										</a>
 								</article>
 							</div>
 						))}

@@ -9,6 +9,30 @@ export const navigationLinks = [
   { label: 'Contact', href: '#contact' },
 ];
 
+export const projects = [
+  {
+    slug: 'portfolio-site',
+    title: 'Portfolio site',
+    description: 'A responsive portfolio for presenting my experience, interests, skills, and selected work.',
+    technologies: ['React', 'TypeScript', 'Bootstrap', 'Vite'],
+    details: 'This portfolio focuses on clear storytelling, responsive layouts, scroll-based motion, and reusable React components.',
+  },
+  {
+    slug: 'interactive-experience',
+    title: 'Interactive experience',
+    description: 'An interactive application built around exploration, feedback, and engaging visual interaction.',
+    technologies: ['JavaScript', 'React', 'CSS'],
+    details: 'Use this page to describe the project goals, your contribution, the technical decisions you made, and what you learned.',
+  },
+  {
+    slug: 'full-stack-application',
+    title: 'Full-stack application',
+    description: 'A full-stack project connecting a thoughtful interface with APIs, services, and persistent data.',
+    technologies: ['TypeScript', 'Node.js', 'SQL'],
+    details: 'Use this page for a deeper case study covering the problem, implementation, challenges, results, and future improvements.',
+  },
+];
+
 export const skillsAndTools = [
   {
     category: 'Frameworks & Libraries',

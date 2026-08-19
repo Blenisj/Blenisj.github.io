@@ -31,7 +31,7 @@ export const SkillsAndTools = () => (
 								<h3 className="fs-4 fw-semibold">{group.category}</h3>
 								<div className="d-flex flex-wrap gap-2 mt-4">
 									{group.items.map((item) => (
-										<span className="badge rounded-pill text-bg-secondary px-3 py-2" key={item}>
+										<span className="badge rounded-pill text-bg-secondary  bg-black px-3 py-2" key={item}>
 											{item}
 										</span>
 									))}

@@ -36,12 +36,12 @@ export const About = () => {
               aria-label={`View details about ${interest.name}`}
             >
               <Card
-                className="border border-secondary rounded-2 text-light"
+                className="border border-secondary rounded-2"
                 sx={{
                   width: 360,
                   height: 200,
                   overflow: 'hidden',
-                  backgroundColor: 'rgba(25, 25, 25, 0.8)',
+                  backgroundColor: 'color-mix(in srgb, var(--portfolio-background) 80%, transparent)',
                 }}
                 elevation={0}
               >
@@ -65,8 +65,8 @@ export const About = () => {
                       bottom: 0,
                       left: 0,
                       padding: 2,
-                      color: '#f1f5f9',
-                      background: 'linear-gradient(transparent, rgba(0, 0, 0, 0.85))',
+                      color: 'var(--portfolio-muted)',
+                      background: 'linear-gradient(transparent, color-mix(in srgb, var(--portfolio-background) 85%, transparent))',
                       opacity: 0,
                       transition: 'opacity 180ms ease',
                     }}

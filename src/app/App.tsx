@@ -25,7 +25,7 @@ export default function App() {
   return (
     <>
     <GradientBackground />
-    <main id="top" className="portfolio-shell text-light">
+    <main id="top" className="portfolio-shell">
       <NavBar />
       <Home />
       <SkillsAndTools />

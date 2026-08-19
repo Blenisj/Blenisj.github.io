@@ -6,7 +6,7 @@ type ProjectDetailsProps = {
 };
 
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => (
-  <main className="portfolio-shell text-light">
+  <main className="portfolio-shell">
     <section className="container min-vh-100 d-flex align-items-center py-5" aria-labelledby="project-title">
       <div className="row justify-content-center w-100">
         <div className="col-lg-9">
@@ -19,7 +19,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => (
           <p className="portfolio-copy lead mb-4">{project.description}</p>
           <div className="d-flex flex-wrap gap-2 mb-5">
             {project.technologies.map((technology) => (
-              <span className="badge rounded-pill text-bg-secondary px-3 py-2" key={technology}>{technology}</span>
+              <span className="badge rounded-pill border border-secondary px-3 py-2" style={{ backgroundColor: 'var(--portfolio-background)', color: 'var(--portfolio-muted)' }} key={technology}>{technology}</span>
             ))}
           </div>
           <div className="border-top border-secondary pt-4">

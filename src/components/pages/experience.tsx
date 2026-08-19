@@ -1,4 +1,6 @@
 
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 import { experiences } from '../../constants/portfolio.constants';
 import '../../styles/experience.css';
 
@@ -20,14 +22,22 @@ export const Experience = () => (
               <time className="experience-period col-md-4 text-md-end pe-md-5">{experience.period}</time>
               <div className="experience-marker" aria-hidden="true" />
               <div className="experience-content col-md-8 ps-md-5">
-                <div className="experience-card experience-card-reveal">
-                  <div className="experience-card-heading mb-3">
-                    <h3 className="fs-4 fw-semibold mb-1">{experience.role}</h3>
-                    <p className="portfolio-accent mb-0">{experience.organization}</p>
-                  </div>
-                  <img className="experience-image mb-3" src={experience.image} alt="" />
-    
-                </div>
+                <Card
+                  className="experience-card experience-card-reveal border border-secondary"
+                  sx={{
+                    backgroundColor: 'color-mix(in srgb, var(--portfolio-background) 60%, transparent)',
+                    color: 'var(--portfolio-muted)',
+                  }}
+                  elevation={0}
+                >
+                  <CardContent className="p-0">
+                    <div className="experience-card-heading mb-3">
+                      <h3 className="fs-4 fw-semibold mb-1">{experience.role}</h3>
+                      <p className="portfolio-accent mb-0">{experience.organization}</p>
+                    </div>
+                    <img className="experience-image mb-3" src={experience.image} alt="" />
+                  </CardContent>
+                </Card>
               </div>
             </article>
           ))}

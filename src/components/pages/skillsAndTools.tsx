@@ -22,8 +22,8 @@ export const SkillsAndTools = () => (
 				return (
 					<div className="col-md-6 col-xl-4 skills-card-pop" key={group.category}>
 						<Card
-							className="h-100 border border-secondary rounded-2 text-light"
-							sx={{ backgroundColor: 'rgba(206, 208, 206, 0.08)' }}
+							  className="h-100 border border-secondary rounded-2"
+							  sx={{ backgroundColor: 'color-mix(in srgb, var(--portfolio-background) 60%, transparent)', color: 'var(--portfolio-muted)' }}
 							elevation={0}
 						>
 							<CardContent className="p-4">
@@ -31,7 +31,7 @@ export const SkillsAndTools = () => (
 								<h3 className="fs-4 fw-semibold">{group.category}</h3>
 								<div className="d-flex flex-wrap gap-2 mt-4">
 									{group.items.map((item) => (
-										<span className="badge rounded-pill text-bg-secondary  bg-black px-3 py-2" key={item}>
+										<span className="badge rounded-pill border border-secondary px-3 py-2" key={item} style={{ backgroundColor: 'var(--portfolio-background)', color: 'var(--portfolio-muted)' }}>
 											{item}
 										</span>
 									))}

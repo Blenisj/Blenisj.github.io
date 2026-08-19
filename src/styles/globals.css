@@ -1,7 +1,7 @@
 
 :root {
-  --portfolio-background: #191919;
-  --portfolio-border: #ced0ce;
+  --portfolio-background: #080808;
+  --portfolio-border: #d8d8d8;
   --portfolio-muted: #e6e8e6;
   --portfolio-accent: #ff3f3f;
 }
@@ -12,7 +12,7 @@
 
 body {
   background-color: var(--portfolio-background);
-  color: #f1f5f9;
+  color: var(--portfolio-muted);
   margin: 0;
 }
 
@@ -28,7 +28,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: #000;
+  background: var(--portfolio-background);
   content: '';
   opacity: 1;
   pointer-events: none;
@@ -54,10 +54,10 @@ body {
   border-top: 1px solid var(--portfolio-border);
 }
 
-.portfolio-project {
-  padding: 1.5rem;
-  border: 1px solid var(--portfolio-border);
-  border-radius: 4px;
+.project-card {
+  padding: 1.25rem;
+  border-radius: 6px;
+  text-align: left;
 }
 
 .navbar-scroll-progress {
@@ -87,7 +87,7 @@ body {
 
 .portfolio-link {
   border-color: var(--portfolio-border);
-  color: #cbd5e1;
+  color: var(--portfolio-muted);
 }
 
 .portfolio-link:hover,
@@ -125,10 +125,4 @@ body {
   transform: translateX(-50%);
 }
 
-.grid-item {
-  padding: 16px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid var(--portfolio-border);
-  border-radius: 4px;
-}
 

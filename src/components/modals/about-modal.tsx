@@ -22,7 +22,7 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
   }, [onClose]);
 
   return (
-    <div className="modal d-block bg-black bg-opacity-75" role="presentation" onClick={onClose}>
+    <div className="modal d-block" style={{ backgroundColor: 'color-mix(in srgb, var(--portfolio-background) 75%, transparent)' }} role="presentation" onClick={onClose}>
       <div
         className="modal-dialog modal-dialog-centered"
         role="dialog"
@@ -30,7 +30,7 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
         aria-labelledby="about-modal-title"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="modal-content bg-dark text-light border-secondary">
+        <div className="modal-content border-secondary" style={{ backgroundColor: 'var(--portfolio-background)', color: 'var(--portfolio-muted)' }}>
           <div className="modal-header border-secondary">
             <h2 id="about-modal-title" className="modal-title fs-3">{item.name}</h2>
             <button className="btn-close btn-close-white" type="button" aria-label="Close details" onClick={onClose} />

@@ -3,7 +3,7 @@ export const Home = () => {
     <section className="container min-vh-100 d-flex align-items-center py-5" aria-labelledby="home-heading">
       <div className="row align-items-center g-5 w-100">
         <div className="col-lg-5 home-load-image">
-          <div className="overflow-hidden border rounded-3 bg-dark">
+          <div className="overflow-hidden border rounded-3" style={{ backgroundColor: 'var(--portfolio-background)' }}>
             <img
               className="w-100 h-100 object-fit-cover"
               src="/pf_image.JPG"

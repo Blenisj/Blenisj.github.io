@@ -1,27 +1,6 @@
 
+import { experiences } from '../../constants/experience.constants';
 import '../../styles/experience.css';
-
-type ExperienceItem = {
-  period: string;
-  role: string;
-  organization: string;
-  description: string;
-};
-
-const experiences: ExperienceItem[] = [
-  {
-    period: '2024 - Present',
-    role: 'Your role or title',
-    organization: 'Company or organization',
-    description: 'Describe your responsibilities, accomplishments, and the skills you developed.',
-  },
-  {
-    period: '2022 - 2024',
-    role: 'Another role or title',
-    organization: 'Company or organization',
-    description: 'Add another position, internship, class project, volunteer role, or leadership experience.',
-  },
-];
 
 export const Experience = () => (
   <section className="experience-timeline portfolio-section" id="experience" aria-labelledby="experience-heading">
@@ -37,7 +16,7 @@ export const Experience = () => (
           <div className="experience-progress" />
         </div>
         {experiences.map((experience) => (
-          <article className="experience-item row g-0 position-relative scroll-reveal" key={`${experience.period}-${experience.role}`}>
+          <article className="experience-item row g-0 position-relative scroll-reveal" key={experience.id}>
             <time className="experience-period col-md-4 text-md-end pe-md-5">{experience.period}</time>
             <div className="experience-marker" aria-hidden="true" />
             <div className="experience-content col-md-8 ps-md-5">

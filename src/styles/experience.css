@@ -7,30 +7,46 @@
 }
 
 .experience-list {
+  position: relative;
   max-width: 980px;
   margin: 0 auto;
 }
 
 .experience-progress-track {
   position: absolute;
-z-index: 0;
-
   top: 0;
   bottom: 0;
   left: 33.333333%;
-  width: 1px;
+  width: 3px;
   background: var(--portfolio-border);
-  opacity: 0.7;
+  view-timeline-name: --experience-track;
+  view-timeline-axis: block;
 }
 
+/* height grows from 0 to 100% as the track scrolls through the viewport */
 .experience-progress {
-  position: fixed;
-  z-index: 0;
+  position: absolute;
   top: 0;
-  bottom: 50vh;
-  left: calc(50% - 163.333333px);
-  width: 3px;
+  left: 0;
+  width: 100%;
+  height: 0;
   background: var(--portfolio-accent);
+  animation: experience-fill linear both;
+  animation-timeline: --experience-track;
+  animation-range: cover 25% cover 75%;
+}
+
+@keyframes experience-fill {
+  to {
+    height: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-progress {
+    animation: none;
+    height: 100%;
+  }
 }
 
 .experience-item {
@@ -62,10 +78,6 @@ z-index: 0;
 @media (max-width: 767px) {
   .experience-progress-track {
     left: 7px;
-  }
-
-  .experience-progress {
-    left: 6px;
   }
 
   .experience-item {

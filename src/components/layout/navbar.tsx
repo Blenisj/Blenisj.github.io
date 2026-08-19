@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import brandMark from '../../assets/brand-mark.svg';
 
 const links = [
-  { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
+  { label: 'About', href: '#about' },
 ];
 
 export const NavBar = () => {
@@ -18,8 +17,7 @@ export const NavBar = () => {
       <nav className="navbar navbar-expand-md portfolio-navbar-bar">
         <div className="container-fluid px-4 px-lg-5">
           <a className="navbar-brand d-flex align-items-center gap-2 portfolio-brand" href="#top" onClick={closeMenu}>
-            <img className="portfolio-brand-image" src={brandMark} alt="" />
-            <span>Blenis.</span>
+            <span>Blenis</span>
           </a>
 
           <button
@@ -50,7 +48,7 @@ export const NavBar = () => {
               ))}
               <a
                 className="btn portfolio-primary rounded-pill px-4"
-                href="mailto:hello@example.com"
+                href="#contact"
                 onClick={closeMenu}
               >
                 Get in touch

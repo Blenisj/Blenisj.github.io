@@ -25,7 +25,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => (
           <div className="border-top border-secondary pt-4">
             <h2 className="fs-3 mb-3">About this project</h2>
             <p className="portfolio-copy mb-4">{project.details}</p>
-            <a className="btn btn-danger rounded-pill px-4" href="mailto:hello@example.com">
+            <a className="btn portfolio-primary rounded-pill px-4" href="mailto:hello@example.com">
               Discuss a project
               <ExternalLink size={16} className="ms-2" aria-hidden="true" />
             </a>

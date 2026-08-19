@@ -3,7 +3,7 @@ import { experiences } from '../../constants/portfolio.constants';
 import '../../styles/experience.css';
 
 export const Experience = () => (
-    <section className="experience-timeline portfolio-section" id="experience" aria-labelledby="experience-heading">
+    <section className="experience-timeline portfolio-section container" id="experience" aria-labelledby="experience-heading">
       <div className="container py-5">
         <div className="experience-heading text-center mx-auto scroll-reveal mb-5">
           <p className="portfolio-kicker mb-2">02</p>

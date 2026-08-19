@@ -2,11 +2,10 @@ import { ExternalLink, Mail } from 'lucide-react';
 import type { ExperienceItem } from '../types/experience.types';
 
 export const navigationLinks = [
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'About', href: '#about' },
 ];
 
 export const projects = [
@@ -55,17 +54,17 @@ export const interests = [
     text: 'Competed on the UC powerlifting team for several years. Still an avid lifter and intend to keep competing for the foreseeable future.',
   },
   {
-    image: 'https://images.pexels.com/photos/1080213/pexels-photo-1080213.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/bearcat_guitar.jpg',
     name: 'Music',
     text: 'I have been playing guitar for years and love to experiment in DAWs to record my own songs.',
   },
   {
-    image: 'https://images.pexels.com/photos/2773977/pexels-photo-2773977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: '/warhammer.jpg',
     name: 'Warhammer 40k',
     text: 'To let out my inner nerd, I love to play Warhammer 40k.',
   },
   {
-    image: 'https://images.pexels.com/photos/810775/pexels-photo-810775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: '/insta.jpg',
     name: 'Video Production & Editing',
     text: 'Another interest or personal detail can go here.',
   },

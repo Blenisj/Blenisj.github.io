@@ -8,10 +8,13 @@ export const NavBar = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="position-fixed top-0 start-50 translate-middle-x mt-3 z-3">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 border border-secondary rounded-pill shadow px-3">
-        <div className="container-fluid">
-          <a className="navbar-brand fw-bold me-lg-5 text-light" href="#top" onClick={closeMenu}>
+    <header className="position-fixed top-0 start-50 translate-middle-x w-100 px-3 mt-2 z-3">
+      <nav
+        className="navbar position-relative navbar-expand-lg navbar-dark bg-dark bg-opacity-75 border border-secondary rounded-pill shadow mx-auto w-100 px-4 py-2 overflow-hidden"
+        style={{ maxWidth: 800 }}
+      >
+        <div className="container-fluid d-flex align-items-center justify-content-between gap-4 p-0">
+          <a className="navbar-brand small fw-bold text-light" href="#top" onClick={closeMenu}>
             <span>Blenis</span>
           </a>
 
@@ -30,7 +33,7 @@ export const NavBar = () => {
             className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}
             id="portfolioNavigation"
           >
-            <div className="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <div className="navbar-nav ms-auto align-items-lg-center gap-lg-3 ">
               {navigationLinks.map((link) => (
                 <a
                   className="nav-link text-light"
@@ -42,7 +45,7 @@ export const NavBar = () => {
                 </a>
               ))}
               <a
-                className="btn btn-danger rounded-pill px-4"
+                className="btn portfolio-primary rounded-pill px-4"
                 href="#contact"
                 onClick={closeMenu}
               >
@@ -50,6 +53,9 @@ export const NavBar = () => {
               </a>
             </div>
           </div>
+        </div>
+        <div className="navbar-scroll-progress" aria-hidden="true">
+          <div className="navbar-scroll-progress-fill" />
         </div>
       </nav>
     </header>

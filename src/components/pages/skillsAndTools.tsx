@@ -20,14 +20,14 @@ export const SkillsAndTools = () => (
 				const Icon = categoryIcons[index];
 
 				return (
-					<div className="col-md-6 col-xl-4" key={group.category}>
+					<div className="col-md-6 col-xl-4 skills-card-pop" key={group.category}>
 						<Card
 							className="h-100 border border-secondary rounded-2 text-light"
 							sx={{ backgroundColor: 'rgba(206, 208, 206, 0.08)' }}
 							elevation={0}
 						>
 							<CardContent className="p-4">
-								<Icon className="mb-3 text-danger" aria-hidden="true" />
+								<Icon className="mb-3 portfolio-accent" aria-hidden="true" />
 								<h3 className="fs-4 fw-semibold">{group.category}</h3>
 								<div className="d-flex flex-wrap gap-2 mt-4">
 									{group.items.map((item) => (

@@ -20,7 +20,7 @@ export const Home = () => {
             Recent graduate from the University of Cincinnati with a passion for software development. I've built and maintained multiple production-level web applications.
           </p>
           <div className="d-flex flex-wrap gap-3 mt-4">
-            <a className="btn btn-danger rounded-pill px-4" href="#skills">
+            <a className="btn portfolio-primary rounded-pill px-4" href="#skills">
               View my skills
             </a>
             <a

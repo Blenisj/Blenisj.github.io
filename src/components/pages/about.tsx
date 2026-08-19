@@ -16,15 +16,18 @@ export const About = () => {
   const [selectedInterest, setSelectedInterest] = useState<string | null>(null);
 
   return (
-    <section className="about-section portfolio-section" id="about" aria-label="About me">
-      <div className="overflow-hidden py-5">
-        <Marquee 
-        gradientColor='#0000773c'
-        speed={30}
-        pauseOnHover={true}
-        autoFill={true}
-        className="d-flex align-items-center z-3 mb-5"
-      >
+    <section className="about-section portfolio-section container" id="about" aria-label="About me">
+      <div className="position-relative start-50 translate-middle-x overflow-hidden py-5" style={{ width: '85vw' }}>
+        <Marquee
+          speed={30}
+          pauseOnHover
+          autoFill
+          className="d-flex align-items-center z-3 mb-5"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent, black 12%, black 88%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black 12%, black 88%, transparent)',
+          }}
+        >
           {interests.map((interest) => (
             <button
               className="btn d-inline-block mx-4 p-0 text-start"

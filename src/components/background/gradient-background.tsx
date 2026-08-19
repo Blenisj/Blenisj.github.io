@@ -1,5 +1,5 @@
 import { ShaderGradient, ShaderGradientCanvas } from '@shadergradient/react';
-
+// TODO: fix background loading issue, so I can remove css fade-in effect
 export function GradientBackground() {
   return (
     <div className="gradient-background" aria-hidden="true">

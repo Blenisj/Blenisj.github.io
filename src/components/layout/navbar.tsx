@@ -8,7 +8,7 @@ const links = [
   { label: 'Projects', href: '#projects' },
 ];
 
-export function NavBar() {
+export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);

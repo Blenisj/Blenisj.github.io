@@ -56,6 +56,90 @@ body {
   padding-top: 132px !important;
 }
 
+.portfolio-introduction {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.portfolio-portrait-wrap {
+  aspect-ratio: 4 / 5;
+  max-width: 420px;
+  overflow: hidden;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 8px;
+  background: #2a2a2a;
+}
+
+.portfolio-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-kicker {
+  color: var(--portfolio-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portfolio-heading {
+  max-width: 720px;
+  color: #f1f5f9;
+}
+
+.portfolio-intro-copy {
+  max-width: 620px;
+}
+
+.portfolio-entry,
+.portfolio-project {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--portfolio-border);
+}
+
+.portfolio-project {
+  padding: 1.5rem;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 4px;
+}
+
+@keyframes scroll-reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-reveal {
+  animation: scroll-reveal-up linear both;
+  animation-range: entry 10% cover 30%;
+  animation-timeline: view();
+}
+
+.scroll-reveal-image {
+  animation-delay: 80ms;
+}
+
+.scroll-reveal-copy {
+  animation-delay: 180ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .portfolio-navbar {
   width: 100%;
   padding: 0;
@@ -138,5 +222,12 @@ body {
 
 .portfolio-section {
   border-top: 1px solid var(--portfolio-border);
+}
+
+.grid-item {
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 4px;
 }
 

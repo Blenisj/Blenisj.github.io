@@ -7,7 +7,7 @@ const categoryIcons = [Code2, Layers3, Wrench];
 
 export const SkillsAndTools = () => (
 	<section className="portfolio-section container py-5" id="skills" aria-labelledby="skills-heading">
-		<div className="text-center mx-auto mb-5" style={{ maxWidth: 760 }}>
+		<div className="text-center mx-auto mb-5 scroll-reveal" style={{ maxWidth: 760 }}>
 			<p className="portfolio-kicker mb-2">03</p>
 			<h2 id="skills-heading" className="display-2 fw-semibold">Skills &amp; tools</h2>
 			<p className="portfolio-copy lead mb-0">

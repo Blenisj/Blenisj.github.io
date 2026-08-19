@@ -51,46 +51,12 @@ body {
   z-index: 1;
 }
 
-.portfolio-hero {
-  min-height: 100vh;
-}
-
-.portfolio-introduction {
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-.portfolio-portrait-wrap {
-  aspect-ratio: 4 / 5;
-  max-width: 420px;
-  overflow: hidden;
-  border: 1px solid var(--portfolio-border);
-  border-radius: 8px;
-  background: #2a2a2a;
-}
-
-.portfolio-portrait {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .portfolio-kicker {
   color: var(--portfolio-accent);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.portfolio-heading {
-  max-width: 720px;
-  color: #f1f5f9;
-}
-
-.portfolio-intro-copy {
-  max-width: 620px;
 }
 
 .portfolio-entry,
@@ -134,6 +100,46 @@ body {
 }
 
 .scroll-reveal-copy {
+  animation-delay: 180ms;
+}
+
+@keyframes home-image-load {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes home-copy-load {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.home-load-image,
+.home-load-copy {
+  animation-duration: 700ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.home-load-image {
+  animation-name: home-image-load;
+}
+
+.home-load-copy {
+  animation-name: home-copy-load;
   animation-delay: 180ms;
 }
 

@@ -11,24 +11,24 @@ export const navigationLinks = [
 
 export const projects = [
   {
-    slug: 'portfolio-site',
-    title: 'Portfolio site',
-    description: 'A responsive portfolio for presenting my experience, interests, skills, and selected work.',
-    technologies: ['React', 'TypeScript', 'Bootstrap', 'Vite'],
-    details: 'This portfolio focuses on clear storytelling, responsive layouts, scroll-based motion, and reusable React components.',
+    slug: 'Delta-Sync',
+    title: 'Delta Sync',
+    description: 'Web application and mod for the racing simulator "Assetto Corsa".',
+    technologies: ['React', 'Python', 'Vite', 'Google Firebase'],
+    details: 'In Assetto Corsa, competition is a large part of the player base, but trying to improve can be difficult, especially for new players. Delta Sync is a publicly available web application and mod for Assetto Corsa. Its goal is to give feedback to players on where and how they can improve their lap times by collecting telemetry data as they play the game. Using the games built-in Python library, the mod will collect data such as throttle, brake, gear, and speed, from laps completed by the player. Data is sent to a Google Firestore database, and later accessed by the web application. The web app utilizes technologies such as Vite and Node.js to display the users data in comparison with other players times using telemetry graphs. Delta Sync is the optimal tool for any player of Assetto Corsa, whether a newcomer or a veteran.',
   },
   {
-    slug: 'interactive-experience',
-    title: 'Interactive experience',
-    description: 'An interactive application built around exploration, feedback, and engaging visual interaction.',
+    slug: 'team-eval',
+    title: 'Team Evaluation Refactor',
+    description: 'Refactored entire front end UI of a team evaluation site from Angular to React',
     technologies: ['JavaScript', 'React', 'CSS'],
     details: 'Use this page to describe the project goals, your contribution, the technical decisions you made, and what you learned.',
   },
   {
-    slug: 'full-stack-application',
-    title: 'Full-stack application',
-    description: 'A full-stack project connecting a thoughtful interface with APIs, services, and persistent data.',
-    technologies: ['TypeScript', 'Node.js', 'SQL'],
+    slug: 'second-person',
+    title: '2nd Person',
+    description: 'Created a melee action game with unique camera mechanics and combat system.',
+    technologies: ['Unity', 'C#'],
     details: 'Use this page for a deeper case study covering the problem, implementation, challenges, results, and future improvements.',
   },
 ];

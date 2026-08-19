@@ -1,40 +1,53 @@
-const experiences = [
-	{
-		role: 'Your role or title',
-		company: 'Company or organization',
-		dates: 'Month Year - Present',
-		description: 'Add a short description of your responsibilities, accomplishments, or what you learned here.',
-	},
-	{
-		role: 'Another role or title',
-		company: 'Another company or organization',
-		dates: 'Month Year - Month Year',
-		description: 'Add another experience, internship, volunteer role, or leadership position.',
-	},
+
+import '../../styles/experience.css';
+
+type ExperienceItem = {
+  period: string;
+  role: string;
+  organization: string;
+  description: string;
+};
+
+const experiences: ExperienceItem[] = [
+  {
+    period: '2024 - Present',
+    role: 'Your role or title',
+    organization: 'Company or organization',
+    description: 'Describe your responsibilities, accomplishments, and the skills you developed.',
+  },
+  {
+    period: '2022 - 2024',
+    role: 'Another role or title',
+    organization: 'Company or organization',
+    description: 'Add another position, internship, class project, volunteer role, or leadership experience.',
+  },
 ];
 
-export const Experience = () => {
-	return (
-		<section className="portfolio-section container py-5" id="experience" aria-labelledby="experience-heading">
-			<div className="row g-4">
-				<div className="col-lg-3 scroll-reveal">
-					<p className="portfolio-kicker mb-2">02</p>
-					<h2 id="experience-heading" className="fs-2 fw-semibold">Experience</h2>
-				</div>
+export const Experience = () => (
+  <section className="experience-timeline portfolio-section" id="experience" aria-labelledby="experience-heading">
+    <div className="container py-5">
+      <div className="experience-heading scroll-reveal mb-5">
+        <p className="portfolio-kicker mb-2">02</p>
+        <h2 id="experience-heading" className="fs-2 fw-semibold">Experience</h2>
+        <p className="portfolio-copy lead mb-0">A timeline of the roles and experiences that have shaped my work.</p>
+      </div>
 
-				<div className="col-lg-9">
-					{experiences.map((experience) => (
-						<article className="portfolio-entry scroll-reveal" key={`${experience.company}-${experience.role}`}>
-							<div className="d-flex flex-wrap justify-content-between gap-2">
-								<h3 className="fs-4 fw-semibold mb-1">{experience.role}</h3>
-								<p className="portfolio-copy small mb-1">{experience.dates}</p>
-							</div>
-							<p className="portfolio-accent mb-2">{experience.company}</p>
-							<p className="portfolio-copy mb-0">{experience.description}</p>
-						</article>
-					))}
-				</div>
-			</div>
-		</section>
-	);
-};
+      <div className="experience-list position-relative">
+        <div className="experience-progress-track" aria-hidden="true">
+          <div className="experience-progress" />
+        </div>
+        {experiences.map((experience) => (
+          <article className="experience-item row g-0 position-relative scroll-reveal" key={`${experience.period}-${experience.role}`}>
+            <time className="experience-period col-md-4 text-md-end pe-md-5">{experience.period}</time>
+            <div className="experience-marker" aria-hidden="true" />
+            <div className="experience-content col-md-8 ps-md-5">
+              <h3 className="fs-4 fw-semibold mb-1">{experience.role}</h3>
+              <p className="portfolio-accent mb-2">{experience.organization}</p>
+              <p className="portfolio-copy mb-0">{experience.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+);

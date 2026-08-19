@@ -26,7 +26,7 @@ export const interests = [
   },
   {
     image: 'https://images.pexels.com/photos/810775/pexels-photo-810775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    name: 'More to come',
+    name: 'Video Production & Editing',
     text: 'Another interest or personal detail can go here.',
   },
 ];

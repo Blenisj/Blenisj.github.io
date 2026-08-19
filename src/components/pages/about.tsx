@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import Box from '@mui/material/Box';
 import type { ComponentType } from 'react';
 import MarqueeModule, { type MarqueeProps } from 'react-fast-marquee';
 import { AboutModal } from '../modals/about-modal';
@@ -32,15 +33,43 @@ export const About = () => {
               aria-label={`View details about ${interest.name}`}
             >
               <Card
-                className="bg-dark bg-opacity-75 border border-secondary rounded-2 text-light"
-                sx={{ width: 300, height: 350 }}
+                className="border border-secondary rounded-2 text-light"
+                sx={{
+                  width: 360,
+                  height: 200,
+                  overflow: 'hidden',
+                  backgroundColor: 'rgba(25, 25, 25, 0.8)',
+                }}
                 elevation={0}
               >
-                <CardContent className="d-flex h-100 flex-column gap-2 overflow-hidden p-2">
-                  <div className="ratio ratio-4x3">
-                    <img className="w-100 h-100 rounded-1 object-fit-cover" src={interest.image} alt="" />
-                  </div>
-                  <strong className="text-danger">{interest.name}</strong>
+                <CardContent
+                  sx={{
+                    position: 'relative',
+                    height: '100%',
+                    padding: 0,
+                    '&:last-child': { paddingBottom: 0 },
+                    '&:hover .interest-name-overlay, &:focus-within .interest-name-overlay': {
+                      opacity: 1,
+                    },
+                  }}
+                >
+                  <img className="w-100 h-100 object-fit-cover" src={interest.image} alt={interest.name} />
+                  <Box
+                    className="interest-name-overlay"
+                    sx={{
+                      position: 'absolute',
+                      right: 0,
+                      bottom: 0,
+                      left: 0,
+                      padding: 2,
+                      color: '#f1f5f9',
+                      background: 'linear-gradient(transparent, rgba(0, 0, 0, 0.85))',
+                      opacity: 0,
+                      transition: 'opacity 180ms ease',
+                    }}
+                  >
+                    <strong>{interest.name}</strong>
+                  </Box>
                 </CardContent>
               </Card>
             </button>

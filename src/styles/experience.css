@@ -24,6 +24,7 @@
 }
 
 /* height grows from 0 to 100% as the track scrolls through the viewport */
+/* TODO: fix scroll logic to be better centered */
 .experience-progress {
   position: absolute;
   top: 0;
@@ -73,6 +74,75 @@
 
 .experience-content {
   padding-bottom: 4rem;
+}
+
+.experience-preview {
+  width: 100%;
+  color: inherit;
+  border: 0;
+  border-radius: 6px;
+}
+
+.experience-preview:focus-visible {
+  outline: 2px solid var(--portfolio-accent);
+  outline-offset: 0.5rem;
+}
+
+.experience-card {
+  padding: 1.25rem;
+  border: 1px solid rgb(206 208 206 / 45%);
+  border-radius: 6px;
+  background: rgb(206 208 206 / 10%);
+  text-align: left;
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.experience-preview:hover .experience-card,
+.experience-preview:focus-visible .experience-card {
+  border-color: var(--portfolio-accent);
+  background: rgb(206 208 206 / 16%);
+  transform: translateY(-3px);
+}
+
+.experience-card-arrow {
+  flex: 0 0 auto;
+  color: var(--portfolio-accent);
+  transition: transform 180ms ease;
+}
+
+.experience-preview:hover .experience-card-arrow,
+.experience-preview:focus-visible .experience-card-arrow {
+  transform: translate(3px, -3px);
+}
+
+.experience-image {
+  display: block;
+  width: min(100%, 360px);
+  height: 150px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.experience-modal {
+  background: rgb(0 0 0 / 72%);
+}
+
+.experience-modal-content {
+  color: #f1f5f9;
+  background: var(--portfolio-background);
+  border: 1px solid var(--portfolio-border);
+}
+
+.experience-modal-image {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.experience-details p {
+  margin-bottom: 0.75rem;
 }
 
 @media (max-width: 767px) {

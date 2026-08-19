@@ -5,6 +5,7 @@ import { Contact } from '../components/pages/contact';
 import { Experience } from '../components/pages/experience';
 import { Home } from '../components/pages/home';
 import { Projects } from '../components/pages/projects';
+import { SkillsAndTools } from '../components/pages/skillsAndTools';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
     <main id="top" className="portfolio-shell text-light">
       <NavBar />
       <Home />
+      <SkillsAndTools />
       <Experience />
       <Projects />
       <About />

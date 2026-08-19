@@ -4,13 +4,29 @@ import type { ExperienceItem } from '../types/experience.types';
 export const navigationLinks = [
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ];
 
+export const skillsAndTools = [
+  {
+    category: 'Frameworks & Libraries',
+    items: ['React', 'Vite', 'Bootstrap', 'Material UI', 'Three.js', 'Unity'],
+  },
+  {
+    category: 'Languages',
+    items: ['TypeScript', 'JavaScript', 'Python', 'C#', 'HTML', 'CSS'],
+  },
+  {
+    category: 'Tools & Platforms',
+    items: ['Git', 'GitHub', 'Jira', 'Linux', 'Node.js', 'SQL'],
+  },
+];
+
 export const interests = [
   {
-    image: 'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/powerlifting.jpg',
     name: 'Powerlifting',
     text: 'Competed on the UC powerlifting team for several years. Still an avid lifter and intend to keep competing for the foreseeable future.',
   },

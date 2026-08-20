@@ -53,38 +53,78 @@ export const projects = [
 export const skillsAndTools = [
   {
     category: "Frameworks & Libraries",
-    items: ["React", "Vite", "Bootstrap", "Material UI", "Three.js", "Unity"],
+    items: [
+      "React.js",
+      "Node.js",
+      "Babylon.js",
+      "Vite",
+      "Bootstrap",
+      "Material UI",
+    ],
   },
   {
     category: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "C#", "HTML", "CSS"],
+    items: [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "C#",
+      "C++",
+      "HTML",
+      "CSS",
+      "SQL",
+    ],
   },
   {
     category: "Tools & Platforms",
-    items: ["Git", "GitHub", "Jira", "Linux", "Node.js", "SQL"],
+    items: [
+      "Git",
+      "Agile",
+      "CI/CD Pipelines",
+      "Jira",
+      "Linux",
+      "Docker",
+      "Unity Engine",
+      "Unreal Engine",
+    ],
   },
 ];
 
+//TODO: crop images and potentially add more
 export const interests = [
   {
     image: "/powerlifting.jpg",
+    images: [
+      "/powerlifting.jpg",
+      "/PL2.jpg",
+      "/PF3.jpg",
+      "/PF4.jpg",
+      "/PF5.jpg",
+    ],
     name: "Powerlifting",
     text: "Competed on the UC powerlifting team for several years. Still an avid lifter and intend to keep competing for the foreseeable future.",
+    links: [] as { label: string; href: string }[],
   },
   {
     image: "/bearcat_guitar.jpg",
+    images: ["/bearcat_guitar.jpg", "/IMG_1812.MOV", "/M1.JPG"],
     name: "Music",
     text: "I have been playing guitar for years and love to experiment in DAWs to record my own songs.",
+    links: [] as { label: string; href: string }[],
   },
   {
     image: "/warhammer.jpg",
-    name: "Warhammer 40k",
+    images: ["/H1.JPG", "/H2.JPG", "/H3.JPG"],
+    name: "Hobbies",
     text: "To let out my inner nerd, I love to play Warhammer 40k.",
+    links: [] as { label: string; href: string }[],
   },
   {
     image: "/insta.jpg",
+    images: ["/0309(4).mp4", "/0803(1).mp4"],
     name: "Video Production & Editing",
     text: "Another interest or personal detail can go here.",
+    links: [] as { label: string; href: string }[],
   },
 ];
 

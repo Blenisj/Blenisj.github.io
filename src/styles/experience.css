@@ -41,6 +41,8 @@
 .experience-period {
   color: var(--portfolio-muted);
   font-size: 0.9rem;
+    display: block;
+    padding-bottom: 0.75rem;
 }
 
 .experience-marker {

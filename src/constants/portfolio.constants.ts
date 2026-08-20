@@ -1,5 +1,8 @@
 import { ExternalLink, Mail } from 'lucide-react';
 import type { ExperienceItem } from '../types/experience.types';
+import healthEdgeImage from '../assets/healthEdge.png';
+import ITSCImage from '../assets/uc_itsc_logo.jpg';
+import KineticVisionImage from '../assets/KV.png';
 
 export const navigationLinks = [
     { label: 'Skills', href: '#skills' },
@@ -73,7 +76,7 @@ export const interests = [
 export const experiences: ExperienceItem[] = [
   {
     id: 'experience-1',
-    image: '/pf_image.JPG',
+    image: healthEdgeImage,
     period: 'May - August 2023',
     role: 'Infrastructure Operations Intern',
     organization: 'HealthEdge',
@@ -81,7 +84,7 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 'experience-2',
-    image: '/pf_image.JPG',
+    image: ITSCImage,
     period: 'April 2024 - August 2025',
     role: 'Full Stack Developer',
     organization: 'IT Solutions Center',
@@ -89,7 +92,7 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 'experience-3',
-    image: '/pf_image.JPG',
+    image: KineticVisionImage,
     period: 'January - April 2026',
     role: 'Interactive Applications Intern',
     organization: 'Kinetic Vision',

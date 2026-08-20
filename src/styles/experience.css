@@ -2,100 +2,48 @@
   border-top: 1px solid var(--portfolio-border);
 }
 
-.experience-heading {
-  max-width: 680px;
-}
-
-.experience-list {
-  position: relative;
-  max-width: 980px;
-  margin: 0 auto;
-}
-
 .experience-progress-track {
-  position: absolute;
-  top: 0;
-  bottom: 0;
   left: 33.333333%;
-  width: 3px;
+  width: 5px;
+  transform: translateX(-50%);
   background: var(--portfolio-border);
   view-timeline-name: --experience-track;
   view-timeline-axis: block;
+  /* Collapses the scrollport to a line at the viewport center, so progress maps
+     to how far that center line has travelled down the track. */
+  view-timeline-inset: 50%;
 }
 
-/* height grows from 0 to 100% as the track scrolls through the viewport */
-/* TODO: fix scroll logic to be better centered */
+/* height grows from 0 to 100% as the viewport center travels down the track */
 .experience-progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 0;
   background: var(--portfolio-accent);
 }
 
 .experience-item {
-  min-height: 180px;
-}
-
-.experience-period {
-  color: var(--portfolio-muted);
-  font-size: 0.9rem;
-  display: block;
-  padding-bottom: 0.75rem;
+  timeline-scope: --experience-card;
 }
 
 .experience-marker {
-  position: absolute;
-  top: 0.15rem;
+  top: 50%;
   left: 33.333333%;
   width: 13px;
   height: 13px;
   border: 3px solid var(--portfolio-background);
-  border-radius: 50%;
   background: var(--portfolio-accent);
   box-shadow: 0 0 0 1px var(--portfolio-accent);
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
+/* Box matches the card exactly, so it can drive the marker's reveal. */
 .experience-content {
-  padding-bottom: 6rem;
-}
-
-.experience-card {
-  padding: 1.25rem;
-  border-radius: 6px;
-  text-align: left;
-}
-
-.experience-image {
-  display: block;
-  width: min(100%, 360px);
-  height: 150px;
-  border-radius: 4px;
-  object-fit: cover;
+  view-timeline-name: --experience-card;
+  view-timeline-axis: block;
 }
 
 @media (max-width: 767px) {
-  .experience-progress-track {
-    left: 7px;
-  }
-
-  .experience-item {
-    min-height: 0;
-    padding-left: 2rem;
-  }
-
-  .experience-period {
-    display: block;
-    padding-bottom: 0.75rem;
-  }
-
+  .experience-progress-track,
   .experience-marker {
     left: 7px;
-  }
-
-  .experience-content {
-    padding-bottom: 4rem;
   }
 }

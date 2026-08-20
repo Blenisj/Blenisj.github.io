@@ -1,8 +1,8 @@
 import { ExternalLink, Mail } from "lucide-react";
-import type { ExperienceItem } from "../types/experience.types";
 import healthEdgeImage from "../assets/healthEdge.png";
 import ITSCImage from "../assets/uc_itsc_logo.jpg";
 import KineticVisionImage from "../assets/KV.png";
+import UCImage from "../assets/uc_logo.png";
 
 export const navigationLinks = [
   { label: "Skills", href: "#skills" },
@@ -38,6 +38,15 @@ export const projects = [
     technologies: ["Unity", "C#"],
     details:
       "Use this page for a deeper case study covering the problem, implementation, challenges, results, and future improvements.",
+  },
+  {
+    slug: "portfolio",
+    title: "This Portfolio",
+    description:
+      "Created this portfolio website to showcase my skills, projects, and experiences.",
+    technologies: ["React", "TypeScript", "Vite", "CSS"],
+    details:
+      "This project showcases my skills and serves as a central hub for my portfolio.",
   },
 ];
 
@@ -79,7 +88,7 @@ export const interests = [
   },
 ];
 
-export const experiences: ExperienceItem[] = [
+export const experiences = [
   {
     id: "experience-1",
     image: healthEdgeImage,
@@ -87,7 +96,7 @@ export const experiences: ExperienceItem[] = [
     role: "Infrastructure Operations Intern",
     organization: "HealthEdge",
     description:
-      "● Resolved service tickets via navigating Linux directories, upgrading company software, and updating customer databases. ● Gained hands-on knowledge of healthcare IT architecture within the industry. ● Wrote and executed shell scripts to automate manual workflows, turning day-long projects into 30-minute tasks.",
+      "Resolved service tickets across Linux systems, software upgrades, and customer databases, and automated manual workflows with shell scripts that turned day-long projects into 30-minute tasks.",
   },
   {
     id: "experience-2",
@@ -96,7 +105,7 @@ export const experiences: ExperienceItem[] = [
     role: "Full Stack Developer",
     organization: "IT Solutions Center",
     description:
-      "● Delivered full-stack features for production sites used by 1,000+ users across multiple client organizations. ● Built and maintained frontend interfaces, backend services, APIs, and database integrations. ● Improved usability, accessibility, and performance through feature enhancements and debugging. ● Delivered projects for clients including Macys, Brooksource, University of Cincinnati, and Ohio Supreme Court. ● Used GitHub for version control and peer code review, resolving 50+ pull requests.",
+      "Built and maintained full-stack features, APIs, and database integrations for production sites used by 1,000+ users at clients including Macy's, Brooksource, the University of Cincinnati, and the Ohio Supreme Court.",
   },
   {
     id: "experience-3",
@@ -105,7 +114,16 @@ export const experiences: ExperienceItem[] = [
     role: "Interactive Applications Intern",
     organization: "Kinetic Vision",
     description:
-      "● Developed immersive VR applications in Unity Engine, recreating physical environments and interactive systems. ● Built custom object manipulation, 3D annotation, and spatial measurement tools within VR. ● Collaborated directly with clients to gather requirements, communicate progress, and ensure project quality. ● Architected and implemented feature sets for internal and production web applications. ● Participated in Agile development workflows using git-based source control and Jira issue tracking.",
+      "Developed immersive Unity VR applications with custom object manipulation, 3D annotation, and measurement tools, working directly with clients in an Agile workflow.",
+  },
+  {
+    id: "experience-4",
+    image: UCImage,
+    period: "August 2021 - April 2026",
+    role: "Graduation",
+    organization: "University of Cincinnati",
+    description:
+      "Completed a 5 year degree in Information Technology: Game Development and Simulation at the University of Cincinnati with a GPA of 3.55",
   },
 ];
 

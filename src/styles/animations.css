@@ -17,7 +17,7 @@
 @keyframes scroll-reveal-up {
   0% {
     opacity: 0;
-    transform: translateY(36px);
+    transform: translateY(60px);
   }
 
   25%,
@@ -148,7 +148,7 @@
 .experience-progress {
   animation: experience-fill linear both;
   animation-timeline: --experience-track;
-  animation-range: cover 25% cover 75%;
+  animation-range: normal;
 }
 
 @keyframes experience-fill {
@@ -162,6 +162,42 @@
   animation: experience-card-slide-in linear both;
   animation-timeline: view();
   animation-range: entry 0% cover 50%;
+}
+
+/* Fades each marker in on its own card's timeline, so the two land together. */
+.experience-marker-reveal {
+  animation: experience-marker-fade-in linear both;
+  animation-timeline: --experience-card;
+  animation-range: entry 0% cover 50%;
+}
+
+/* Slides Experience dates in from the left, in step with their card. */
+.experience-period-reveal {
+  animation: experience-period-slide-in linear both;
+  animation-timeline: --experience-card;
+  animation-range: entry 0% cover 50%;
+}
+
+@keyframes experience-period-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-75%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes experience-marker-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Defines the Experience card entrance. */
@@ -182,7 +218,9 @@
   .home-load-image,
   .home-load-copy,
   .skills-card-pop,
-  .experience-card-reveal {
+  .experience-card-reveal,
+  .experience-marker-reveal,
+  .experience-period-reveal {
     animation: none;
     opacity: 1;
     transform: none;

@@ -1,8 +1,11 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { projects } from "../../constants/portfolio.constants";
+import {
+  contactEmailHref,
+  type Project,
+} from "../../constants/portfolio.constants";
 
 type ProjectDetailsProps = {
-  project: (typeof projects)[number];
+  project: Project;
 };
 
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => (
@@ -28,11 +31,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => (
           <div className="d-flex flex-wrap gap-2 mb-5">
             {project.technologies.map((technology) => (
               <span
-                className="badge rounded-pill border border-secondary px-3 py-2"
-                style={{
-                  backgroundColor: "var(--portfolio-background)",
-                  color: "var(--portfolio-muted)",
-                }}
+                className="badge rounded-pill border border-secondary px-3 py-2 portfolio-badge"
                 key={technology}
               >
                 {technology}
@@ -44,7 +43,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => (
             <p className="portfolio-copy mb-4">{project.details}</p>
             <a
               className="btn portfolio-primary rounded-pill px-4"
-              href="mailto:hello@example.com"
+              href={contactEmailHref}
             >
               Discuss a project
               <ExternalLink size={16} className="ms-2" aria-hidden="true" />

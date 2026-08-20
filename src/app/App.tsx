@@ -38,10 +38,7 @@ export default function App() {
           id="skills"
           aria-labelledby="skills-heading"
         >
-          <div
-            className="text-center mx-auto mb-5 scroll-reveal"
-            style={{ maxWidth: 760 }}
-          >
+          <div className="portfolio-section-heading text-center mx-auto mb-5 scroll-reveal">
             <p className="portfolio-kicker mb-2">01</p>
             <h2 id="skills-heading" className="display-2 fw-semibold">
               Skills &amp; tools
@@ -59,10 +56,7 @@ export default function App() {
           id="experience"
           aria-labelledby="experience-heading"
         >
-          <div
-            className="text-center mx-auto mb-5 scroll-reveal"
-            style={{ maxWidth: 760 }}
-          >
+          <div className="portfolio-section-heading text-center mx-auto mb-5 scroll-reveal">
             <p className="portfolio-kicker mb-2">02</p>
             <h2 id="experience-heading" className="display-2 fw-semibold">
               Experience
@@ -79,10 +73,7 @@ export default function App() {
           id="projects"
           aria-labelledby="projects-heading"
         >
-          <div
-            className="text-center mx-auto mb-5 scroll-reveal"
-            style={{ maxWidth: 760 }}
-          >
+          <div className="portfolio-section-heading text-center mx-auto mb-5 scroll-reveal">
             <p className="portfolio-kicker mb-2">03</p>
             <h2 id="projects-heading" className="display-2 fw-semibold">
               Projects
@@ -99,10 +90,7 @@ export default function App() {
           id="about"
           aria-labelledby="about-heading"
         >
-          <div
-            className="text-center mx-auto mb-5 scroll-reveal"
-            style={{ maxWidth: 760 }}
-          >
+          <div className="portfolio-section-heading text-center mx-auto mb-5 scroll-reveal">
             <p className="portfolio-kicker mb-2">04</p>
             <h2 id="about-heading" className="display-2 fw-semibold">
               About me
@@ -121,10 +109,7 @@ export default function App() {
           id="contact"
           aria-labelledby="contact-heading"
         >
-          <div
-            className="text-center mx-auto mb-5 scroll-reveal"
-            style={{ maxWidth: 760 }}
-          >
+          <div className="portfolio-section-heading text-center mx-auto mb-5 scroll-reveal">
             <p className="portfolio-kicker mb-2">05</p>
             <h2 id="contact-heading" className="display-2 fw-semibold">
               Let&apos;s connect.

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navigationLinks } from "../../constants/portfolio.constants";
-import { surface } from "../../constants/theme.constants";
 
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,14 +9,10 @@ export const NavBar = () => {
 
   return (
     <header className="position-fixed top-0 start-50 translate-middle-x w-100 px-3 mt-2 z-3">
-      <nav
-        className="navbar position-relative navbar-expand-lg border-secondary rounded-pill shadow mx-auto w-100 px-4 py-2 overflow-hidden"
-        style={{ maxWidth: 800, backgroundColor: surface(75) }}
-      >
+      <nav className="navbar portfolio-navbar position-relative navbar-expand-lg border-secondary rounded-pill shadow mx-auto w-100 px-4 py-2 overflow-hidden">
         <div className="container-fluid d-flex align-items-center justify-content-between gap-4 p-0">
           <a
-            className="navbar-brand small fw-bold"
-            style={{ color: "var(--portfolio-muted)" }}
+            className="navbar-brand small fw-bold portfolio-copy"
             href="#top"
             onClick={closeMenu}
           >
@@ -41,11 +36,10 @@ export const NavBar = () => {
             className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
             id="portfolioNavigation"
           >
-            <div className="navbar-nav ms-auto align-items-lg-center gap-lg-3 ">
+            <div className="navbar-nav ms-auto align-items-lg-center gap-lg-3">
               {navigationLinks.map((link) => (
                 <a
-                  className="nav-link"
-                  style={{ color: "var(--portfolio-muted)" }}
+                  className="nav-link portfolio-copy"
                   key={link.href}
                   href={link.href}
                   onClick={closeMenu}

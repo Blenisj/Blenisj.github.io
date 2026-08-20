@@ -1,24 +1,16 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { surface } from "../../constants/theme.constants";
-
-type AboutItem = {
-  image: string;
-  images?: string[];
-  name: string;
-  text: string;
-  links?: { label: string; href: string }[];
-};
+import type { Interest } from "../../constants/portfolio.constants";
 
 type AboutModalProps = {
-  item: AboutItem;
+  item: Interest;
   onClose: () => void;
 };
 
 const isVideo = (source: string) => /\.(mp4|webm|mov)$/i.test(source);
 
 export const AboutModal = ({ item, onClose }: AboutModalProps) => {
-  const slides = item.images?.length ? item.images : [item.image];
+  const slides = item.images.length ? item.images : [item.image];
   const [slide, setSlide] = useState(0);
 
   useEffect(() => {
@@ -35,8 +27,7 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
 
   return (
     <div
-      className="modal d-block"
-      style={{ backgroundColor: surface(75) }}
+      className="modal d-block portfolio-modal-backdrop"
       role="presentation"
       onClick={onClose}
     >
@@ -47,13 +38,7 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
         aria-labelledby="about-modal-title"
         onClick={(event) => event.stopPropagation()}
       >
-        <div
-          className="modal-content border-secondary"
-          style={{
-            backgroundColor: "var(--portfolio-background)",
-            color: "var(--portfolio-muted)",
-          }}
-        >
+        <div className="modal-content border-secondary portfolio-surface">
           <div className="modal-header border-secondary">
             <h2 id="about-modal-title" className="modal-title fs-3">
               {item.name}
@@ -69,8 +54,7 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
             <div className="position-relative mb-3">
               {isVideo(slides[slide]) ? (
                 <video
-                  className="w-100 rounded-2 object-fit-cover bg-black"
-                  style={{ height: 320 }}
+                  className="w-100 rounded-2 object-fit-cover bg-black about-modal-media"
                   src={slides[slide]}
                   title={`${item.name} video`}
                   controls
@@ -79,8 +63,7 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
                 />
               ) : (
                 <img
-                  className="w-100 rounded-2 object-fit-cover"
-                  style={{ height: 320 }}
+                  className="w-100 rounded-2 object-fit-cover about-modal-media"
                   src={slides[slide]}
                   alt={`${item.name} ${slide + 1} of ${slides.length}`}
                 />
@@ -106,10 +89,9 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
                   <div className="position-absolute bottom-0 start-50 translate-middle-x d-flex gap-2 mb-2">
                     {slides.map((source, index) => (
                       <button
-                        className={`btn btn-sm p-0 border-0 rounded-circle ${
+                        className={`btn btn-sm p-0 border-0 rounded-circle about-modal-dot ${
                           index === slide ? "bg-light" : "bg-secondary"
                         }`}
-                        style={{ width: 9, height: 9 }}
                         type="button"
                         key={source}
                         aria-label={`Show image ${index + 1}`}

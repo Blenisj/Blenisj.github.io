@@ -4,6 +4,29 @@ import ITSCImage from "../assets/uc_itsc_logo.jpg";
 import KineticVisionImage from "../assets/KV.png";
 import UCImage from "../assets/uc_logo.png";
 
+export type Project = {
+  slug: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  details: string;
+};
+
+export type InterestLink = {
+  label: string;
+  href: string;
+};
+
+export type Interest = {
+  image: string;
+  images: string[];
+  name: string;
+  text: string;
+  links?: InterestLink[];
+};
+
+export const contactEmailHref = "mailto:hello@example.com";
+
 export const navigationLinks = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
@@ -11,9 +34,9 @@ export const navigationLinks = [
   { label: "About", href: "#about" },
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
-    slug: "Delta-Sync",
+    slug: "delta-sync",
     title: "Delta Sync",
     description:
       'Web application and mod for the racing simulator "Assetto Corsa".',
@@ -50,7 +73,7 @@ export const projects = [
   },
 ];
 
-export const skillsAndTools = [
+export const skillGroups = [
   {
     category: "Frameworks & Libraries",
     items: [
@@ -91,7 +114,7 @@ export const skillsAndTools = [
 ];
 
 //TODO: crop images and potentially add more
-export const interests = [
+export const interests: Interest[] = [
   {
     image: "/powerlifting.jpg",
     images: [
@@ -103,28 +126,24 @@ export const interests = [
     ],
     name: "Powerlifting",
     text: "Competed on the UC powerlifting team for several years. Still an avid lifter and intend to keep competing for the foreseeable future.",
-    links: [] as { label: string; href: string }[],
   },
   {
     image: "/bearcat_guitar.jpg",
     images: ["/bearcat_guitar.jpg", "/IMG_1812.MOV", "/M1.JPG"],
     name: "Music",
     text: "I have been playing guitar for years and love to experiment in DAWs to record my own songs.",
-    links: [] as { label: string; href: string }[],
   },
   {
     image: "/warhammer.jpg",
     images: ["/H1.JPG", "/H2.JPG", "/H3.JPG"],
     name: "Hobbies",
     text: "To let out my inner nerd, I love to play Warhammer 40k.",
-    links: [] as { label: string; href: string }[],
   },
   {
     image: "/insta.jpg",
     images: ["/0309(4).mp4", "/0803(1).mp4"],
     name: "Video Production & Editing",
     text: "Another interest or personal detail can go here.",
-    links: [] as { label: string; href: string }[],
   },
 ];
 
@@ -180,7 +199,7 @@ export const contactLinks = [
   },
   {
     label: "Email",
-    href: "mailto:hello@example.com",
+    href: contactEmailHref,
     icon: Mail,
   },
 ];

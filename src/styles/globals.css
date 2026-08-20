@@ -33,6 +33,12 @@ body {
   pointer-events: none;
 }
 
+.gradient-background-canvas {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 .portfolio-shell {
   min-height: 100vh;
   position: relative;
@@ -47,10 +53,102 @@ body {
   text-transform: uppercase;
 }
 
-.project-card {
-  padding: 1.25rem;
-  border-radius: 6px;
-  text-align: left;
+.portfolio-section-heading {
+  max-width: 760px;
+}
+
+.portfolio-surface {
+  background-color: var(--portfolio-background);
+  color: var(--portfolio-muted);
+}
+
+.portfolio-card {
+  background-color: color-mix(
+    in srgb,
+    var(--portfolio-background) 60%,
+    transparent
+  );
+  color: var(--portfolio-muted);
+}
+
+.portfolio-badge {
+  background-color: var(--portfolio-background);
+  color: var(--portfolio-muted);
+}
+
+.portfolio-navbar {
+  max-width: 800px;
+  background-color: color-mix(
+    in srgb,
+    var(--portfolio-background) 75%,
+    transparent
+  );
+}
+
+.portfolio-modal-backdrop {
+  background-color: color-mix(
+    in srgb,
+    var(--portfolio-background) 75%,
+    transparent
+  );
+}
+
+.about-modal-media {
+  height: 320px;
+}
+
+.about-modal-dot {
+  width: 9px;
+  height: 9px;
+}
+
+.interest-card {
+  width: 360px;
+  height: 200px;
+  overflow: hidden;
+  background-color: color-mix(
+    in srgb,
+    var(--portfolio-background) 80%,
+    transparent
+  );
+}
+
+.interest-name-overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: var(--portfolio-muted);
+  background: linear-gradient(
+    transparent,
+    color-mix(in srgb, var(--portfolio-background) 85%, transparent)
+  );
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.interest-card-button:hover .interest-name-overlay,
+.interest-card-button:focus-visible .interest-name-overlay {
+  opacity: 1;
+}
+
+.about-marquee-frame {
+  width: 85vw;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
 }
 
 .navbar-scroll-progress {

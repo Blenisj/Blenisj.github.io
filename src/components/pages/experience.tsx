@@ -1,11 +1,8 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import { experiences } from "../../constants/portfolio.constants";
-import { cardSx } from "../../constants/theme.constants";
 import "../../styles/experience.css";
 
 export const Experience = () => (
-  <div className="position-relative mx-auto" style={{ maxWidth: 980 }}>
+  <div className="experience-list position-relative mx-auto">
     <div
       className="experience-progress-track position-absolute top-0 bottom-0"
       aria-hidden="true"
@@ -25,17 +22,10 @@ export const Experience = () => (
           aria-hidden="true"
         />
         <div className="experience-content col-md-8 ps-md-5">
-          <Card
-            className="experience-card-reveal border border-secondary rounded-2 p-4 text-start"
-            sx={cardSx}
-            elevation={0}
-          >
-            <CardContent className="p-0">
+          <div className="card experience-card-reveal border border-secondary rounded-2 portfolio-card text-start">
+            <div className="card-body p-4">
               <div className="d-flex align-items-start gap-3 mb-3">
-                <div
-                  className="ratio ratio-1x1 flex-shrink-0"
-                  style={{ width: 72 }}
-                >
+                <div className="ratio ratio-1x1 experience-logo">
                   <img
                     className="w-100 h-100 object-fit-cover rounded-1"
                     src={experience.image}
@@ -52,8 +42,8 @@ export const Experience = () => (
               <p className="portfolio-copy small lh-base mb-0">
                 {experience.description}
               </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </article>
     ))}

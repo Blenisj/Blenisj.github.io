@@ -4,7 +4,7 @@ export function GradientBackground() {
   return (
     <div className="gradient-background" aria-hidden="true">
       <ShaderGradientCanvas
-        style={{ width: "100%", height: "100%", pointerEvents: "none" }}
+        className="gradient-background-canvas"
         fov={45}
         pixelDensity={1}
       >

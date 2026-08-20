@@ -1,3 +1,7 @@
+.experience-list {
+  max-width: 980px;
+}
+
 .experience-progress-track {
   left: 33.333333%;
   width: 5px;
@@ -29,6 +33,11 @@
   background: var(--portfolio-accent);
   box-shadow: 0 0 0 1px var(--portfolio-accent);
   transform: translate(-50%, -50%);
+}
+
+.experience-logo {
+  width: 72px;
+  min-width: 72px;
 }
 
 /* Box matches the card exactly, so it can drive the marker's reveal. */

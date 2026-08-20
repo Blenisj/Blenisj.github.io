@@ -6,10 +6,7 @@ export const Home = () => {
     >
       <div className="row align-items-center g-5 w-100">
         <div className="col-lg-5 home-load-image">
-          <div
-            className="overflow-hidden border rounded-3"
-            style={{ backgroundColor: "var(--portfolio-background)" }}
-          >
+          <div className="overflow-hidden border rounded-3 portfolio-surface">
             <img
               className="w-100 h-100 object-fit-cover"
               src="/pf_image.JPG"

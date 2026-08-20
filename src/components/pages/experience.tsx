@@ -13,7 +13,7 @@ export const Experience = () => (
     </div>
     {experiences.map((experience) => (
       <article
-        className="experience-item row g-0 position-relative scroll-reveal mb-5 ps-4 ps-md-0"
+        className="experience-item row g-0 position-relative mb-5 ps-4 ps-md-0"
         key={experience.id}
       >
         <time className="experience-period-reveal col-md-4 d-md-flex align-items-md-center justify-content-md-end text-md-end pe-md-5 pb-3 pb-md-0 fs-4 fw-semibold portfolio-copy">

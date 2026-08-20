@@ -38,14 +38,6 @@
   animation-timeline: view();
 }
 
-.scroll-reveal-image {
-  animation-delay: 80ms;
-}
-
-.scroll-reveal-copy {
-  animation-delay: 180ms;
-}
-
 /* Reveals the Home image on initial page load. */
 @keyframes home-image-load {
   from {

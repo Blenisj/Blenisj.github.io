@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navigationLinks } from "../../constants/portfolio.constants";
+import { surface } from "../../constants/theme.constants";
 
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,12 +11,8 @@ export const NavBar = () => {
   return (
     <header className="position-fixed top-0 start-50 translate-middle-x w-100 px-3 mt-2 z-3">
       <nav
-        className="navbar position-relative navbar-expand-lg  border-secondary rounded-pill shadow mx-auto w-100 px-4 py-2 overflow-hidden"
-        style={{
-          maxWidth: 800,
-          backgroundColor:
-            "color-mix(in srgb, var(--portfolio-background) 75%, transparent)",
-        }}
+        className="navbar position-relative navbar-expand-lg border-secondary rounded-pill shadow mx-auto w-100 px-4 py-2 overflow-hidden"
+        style={{ maxWidth: 800, backgroundColor: surface(75) }}
       >
         <div className="container-fluid d-flex align-items-center justify-content-between gap-4 p-0">
           <a

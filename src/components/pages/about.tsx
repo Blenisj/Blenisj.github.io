@@ -6,15 +6,24 @@ import type { ComponentType } from "react";
 import MarqueeModule, { type MarqueeProps } from "react-fast-marquee";
 import { AboutModal } from "../modals/about-modal";
 import { interests } from "../../constants/portfolio.constants";
+import { surface } from "../../constants/theme.constants";
 
+// The package ships both a CJS default and an ESM named export.
 const marqueeExport =
   MarqueeModule as unknown as ComponentType<MarqueeProps> & {
     default?: ComponentType<MarqueeProps>;
   };
 const Marquee = marqueeExport.default ?? marqueeExport;
 
+type Interest = (typeof interests)[number];
+
+const maskGradient =
+  "linear-gradient(to right, transparent, black 12%, black 88%, transparent)";
+
 export const About = () => {
-  const [selectedInterest, setSelectedInterest] = useState<string | null>(null);
+  const [selectedInterest, setSelectedInterest] = useState<Interest | null>(
+    null,
+  );
 
   return (
     <>
@@ -27,18 +36,14 @@ export const About = () => {
           pauseOnHover
           autoFill
           className="d-flex align-items-center z-3 mb-5"
-          style={{
-            maskImage:
-              "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
-          }}
+          style={{ maskImage: maskGradient, WebkitMaskImage: maskGradient }}
         >
           {interests.map((interest) => (
             <button
               className="btn d-inline-block mx-4 p-0 text-start"
               type="button"
-              onClick={() => setSelectedInterest(interest.name)}
+              key={interest.name}
+              onClick={() => setSelectedInterest(interest)}
               aria-label={`View details about ${interest.name}`}
             >
               <Card
@@ -47,8 +52,7 @@ export const About = () => {
                   width: 360,
                   height: 200,
                   overflow: "hidden",
-                  backgroundColor:
-                    "color-mix(in srgb, var(--portfolio-background) 80%, transparent)",
+                  backgroundColor: surface(80),
                 }}
                 elevation={0}
               >
@@ -78,8 +82,7 @@ export const About = () => {
                       left: 0,
                       padding: 2,
                       color: "var(--portfolio-muted)",
-                      background:
-                        "linear-gradient(transparent, color-mix(in srgb, var(--portfolio-background) 85%, transparent))",
+                      background: `linear-gradient(transparent, ${surface(85)})`,
                       opacity: 0,
                       transition: "opacity 180ms ease",
                     }}
@@ -94,9 +97,7 @@ export const About = () => {
       </div>
       {selectedInterest && (
         <AboutModal
-          item={
-            interests.find((interest) => interest.name === selectedInterest)!
-          }
+          item={selectedInterest}
           onClose={() => setSelectedInterest(null)}
         />
       )}

@@ -5,11 +5,11 @@ export function GradientBackground() {
     <div className="gradient-background" aria-hidden="true">
       <ShaderGradientCanvas
         style={{ width: "100%", height: "100%", pointerEvents: "none" }}
+        fov={45}
+        pixelDensity={1}
       >
         <ShaderGradient
           animate="on"
-          bgColor1="#000000"
-          bgColor2="#000000"
           brightness={0.1}
           cAzimuthAngle={180}
           cDistance={2.81}
@@ -18,16 +18,9 @@ export function GradientBackground() {
           color1="#ff0000"
           color2="#0000"
           color3="#ff0000"
-          destination="onCanvas"
-          embedMode="off"
           envPreset="dawn"
-          format="gif"
-          fov={45}
-          frameRate={10}
-          gizmoHelper="hide"
           grain="off"
           lightType="env"
-          pixelDensity={1}
           positionX={0}
           positionY={0}
           positionZ={0}

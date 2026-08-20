@@ -2,9 +2,10 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { Code2, Layers3, Wrench } from "lucide-react";
 import { skillsAndTools } from "../../constants/portfolio.constants";
+import { cardSx } from "../../constants/theme.constants";
 
 const categoryIcons = [Code2, Layers3, Wrench];
-//TODO replace icons in corner
+// TODO: replace icons in corner
 export const SkillsAndTools = () => (
   <div className="row g-4">
     {skillsAndTools.map((group, index) => {
@@ -14,11 +15,7 @@ export const SkillsAndTools = () => (
         <div className="col-md-6 col-xl-4 skills-card-pop" key={group.category}>
           <Card
             className="h-100 border border-secondary rounded-2"
-            sx={{
-              backgroundColor:
-                "color-mix(in srgb, var(--portfolio-background) 60%, transparent)",
-              color: "var(--portfolio-muted)",
-            }}
+            sx={cardSx}
             elevation={0}
           >
             <CardContent className="p-4">

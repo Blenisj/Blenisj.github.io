@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc -b && vite build",
     "preview": "vite preview",
+    "typecheck": "tsc -b",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "@react-three/fiber": "^9.7.0",
     "@shadergradient/react": "^2.4.20",
     "@vitejs/plugin-react": "latest",
+    "bootstrap": "^5.3.0",
     "camera-controls": "^3.1.2",
     "lucide-react": "latest",
     "react": "latest",
@@ -30,7 +32,6 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@types/three": "^0.185.4",
-    "bootstrap": "^5.3.0",
     "eslint": "^10.8.1",
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.11.0",

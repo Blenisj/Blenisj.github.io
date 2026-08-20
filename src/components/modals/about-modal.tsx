@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { surface } from "../../constants/theme.constants";
 
 type AboutItem = {
   image: string;
@@ -35,10 +36,7 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
   return (
     <div
       className="modal d-block"
-      style={{
-        backgroundColor:
-          "color-mix(in srgb, var(--portfolio-background) 75%, transparent)",
-      }}
+      style={{ backgroundColor: surface(75) }}
       role="presentation"
       onClick={onClose}
     >
@@ -74,6 +72,7 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
                   className="w-100 rounded-2 object-fit-cover bg-black"
                   style={{ height: 320 }}
                   src={slides[slide]}
+                  title={`${item.name} video`}
                   controls
                   playsInline
                   preload="metadata"
@@ -83,7 +82,7 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
                   className="w-100 rounded-2 object-fit-cover"
                   style={{ height: 320 }}
                   src={slides[slide]}
-                  alt=""
+                  alt={`${item.name} ${slide + 1} of ${slides.length}`}
                 />
               )}
               {slides.length > 1 && (

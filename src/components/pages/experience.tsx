@@ -1,6 +1,7 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { experiences } from "../../constants/portfolio.constants";
+import { cardSx } from "../../constants/theme.constants";
 import "../../styles/experience.css";
 
 export const Experience = () => (
@@ -26,20 +27,19 @@ export const Experience = () => (
         <div className="experience-content col-md-8 ps-md-5">
           <Card
             className="experience-card-reveal border border-secondary rounded-2 p-4 text-start"
-            sx={{
-              backgroundColor:
-                "color-mix(in srgb, var(--portfolio-background) 60%, transparent)",
-              color: "var(--portfolio-muted)",
-            }}
+            sx={cardSx}
             elevation={0}
           >
             <CardContent className="p-0">
               <div className="d-flex align-items-start gap-3 mb-3">
-                <div className="ratio ratio-1x1 shrink-0" style={{ width: 72 }}>
+                <div
+                  className="ratio ratio-1x1 flex-shrink-0"
+                  style={{ width: 72 }}
+                >
                   <img
                     className="w-100 h-100 object-fit-cover rounded-1"
                     src={experience.image}
-                    alt=""
+                    alt={`${experience.organization} logo`}
                   />
                 </div>
                 <div>

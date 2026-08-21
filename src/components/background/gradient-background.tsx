@@ -10,7 +10,7 @@ export function GradientBackground() {
       >
         <ShaderGradient
           animate="on"
-          brightness={0.1}
+          brightness={0.7}
           cAzimuthAngle={180}
           cDistance={2.81}
           cPolarAngle={80}
@@ -18,9 +18,8 @@ export function GradientBackground() {
           color1="#ff0000"
           color2="#0000"
           color3="#ff0000"
-          envPreset="dawn"
           grain="off"
-          lightType="env"
+          lightType="3d"
           positionX={0}
           positionY={0}
           positionZ={0}

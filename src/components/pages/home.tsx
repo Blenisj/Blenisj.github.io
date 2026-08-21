@@ -1,5 +1,3 @@
-import { withBase } from "../../utils/paths";
-
 export const Home = () => {
   return (
     <section
@@ -11,7 +9,7 @@ export const Home = () => {
           <div className="overflow-hidden border rounded-3 portfolio-surface">
             <img
               className="w-100 h-100 object-fit-cover"
-              src={withBase("pf_image.JPG")}
+              src="/pf_image.JPG"
               alt="Portrait of Jake Blenis"
             />
           </div>

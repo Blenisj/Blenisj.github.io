@@ -9,12 +9,10 @@ import { ProjectDetails } from "../components/pages/project-details";
 import { SkillsAndTools } from "../components/pages/skills-and-tools";
 import { projects } from "../constants/portfolio.constants";
 
-const projectSlugPattern = /^\/?projects\/([^/]+)\/?$/;
+const projectSlugPattern = /^\/projects\/([^/]+)\/?$/;
 
 export default function App() {
-  const projectSlug = window.location.pathname
-    .replace(import.meta.env.BASE_URL, "/")
-    .match(projectSlugPattern)?.[1];
+  const projectSlug = window.location.pathname.match(projectSlugPattern)?.[1];
   const selectedProject = projects.find(
     (project) => project.slug === projectSlug,
   );

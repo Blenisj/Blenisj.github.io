@@ -3,7 +3,6 @@ import healthEdgeImage from "../assets/healthEdge.png";
 import ITSCImage from "../assets/uc_itsc_logo.jpg";
 import KineticVisionImage from "../assets/KV.png";
 import UCImage from "../assets/uc_logo.png";
-import { withBase } from "../utils/paths";
 import DSImage from "../assets/DS_poster.jpg";
 
 export type Project = {
@@ -132,36 +131,32 @@ export const skillGroups = [
 //TODO: crop images and potentially add more
 export const interests: Interest[] = [
   {
-    image: withBase("powerlifting.jpg"),
+    image: "/powerlifting.jpg",
     images: [
-      withBase("powerlifting.jpg"),
-      withBase("PL2.jpg"),
-      withBase("PF3.jpg"),
-      withBase("PF4.jpg"),
-      withBase("PF5.jpg"),
+      "/powerlifting.jpg",
+      "/PL2.jpg",
+      "/PF3.jpg",
+      "/PF4.jpg",
+      "/PF5.jpg",
     ],
     name: "Powerlifting",
     text: "Competed on the UC powerlifting team for several years. Still an avid lifter and intend to keep competing for the foreseeable future.",
   },
   {
-    image: withBase("bearcat_guitar.jpg"),
-    images: [
-      withBase("bearcat_guitar.jpg"),
-      withBase("IMG_1812.MOV"),
-      withBase("M1.JPG"),
-    ],
+    image: "/bearcat_guitar.jpg",
+    images: ["/bearcat_guitar.jpg", "/IMG_1812.MOV", "/M1.JPG"],
     name: "Music",
     text: "I have been playing guitar for years and love to experiment in DAWs to record my own songs.",
   },
   {
-    image: withBase("warhammer.jpg"),
-    images: [withBase("H1.JPG"), withBase("H2.JPG"), withBase("H3.JPG")],
+    image: "/warhammer.jpg",
+    images: ["/H1.JPG", "/H2.JPG", "/H3.JPG"],
     name: "Hobbies",
     text: "To let out my inner nerd, I love to play Warhammer 40k.",
   },
   {
-    image: withBase("insta.jpg"),
-    images: [withBase("0309(4).mp4"), withBase("0803(1).mp4")],
+    image: "/insta.jpg",
+    images: ["/0309(4).mp4", "/0803(1).mp4"],
     name: "Video Production & Editing",
     text: "Another interest or personal detail can go here.",
   },

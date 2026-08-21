@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "../../constants/portfolio.constants";
-import { withBase } from "../../utils/paths";
 
 export const Projects = () => (
   <div className="row g-4">
@@ -8,7 +7,7 @@ export const Projects = () => (
       <div className="col-md-6 col-xl-4 scroll-reveal" key={project.slug}>
         <a
           className="project-card-link d-block h-100 text-decoration-none"
-          href={withBase(`projects/${project.slug}`)}
+          href={`/projects/${project.slug}`}
         >
           <div className="card h-100 border border-secondary rounded-2 portfolio-card text-start">
             <div className="card-body d-flex flex-column p-4">

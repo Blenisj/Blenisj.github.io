@@ -3,6 +3,7 @@ import healthEdgeImage from "../assets/healthEdge.png";
 import ITSCImage from "../assets/uc_itsc_logo.jpg";
 import KineticVisionImage from "../assets/KV.png";
 import UCImage from "../assets/uc_logo.png";
+import DSImage from "../assets/DS_poster.jpg";
 
 export type Project = {
   slug: string;
@@ -10,6 +11,10 @@ export type Project = {
   description: string;
   technologies: string[];
   details: string;
+  image?: string;
+  externalUrl?: string;
+  github?: string;
+  externalLabel?: string;
 };
 
 export type InterestLink = {
@@ -43,6 +48,10 @@ export const projects: Project[] = [
     technologies: ["React", "Python", "Vite", "Google Firebase"],
     details:
       "In Assetto Corsa, competition is a large part of the player base, but trying to improve can be difficult, especially for new players. Delta Sync is a publicly available web application and mod for Assetto Corsa. Its goal is to give feedback to players on where and how they can improve their lap times by collecting telemetry data as they play the game. Using the games built-in Python library, the mod will collect data such as throttle, brake, gear, and speed, from laps completed by the player. Data is sent to a Google Firestore database, and later accessed by the web application. The web app utilizes technologies such as Vite and Node.js to display the users data in comparison with other players times using telemetry graphs. Delta Sync is the optimal tool for any player of Assetto Corsa, whether a newcomer or a veteran.",
+    image: DSImage,
+    externalUrl: "https://itexpo.live/2026/seniors/388",
+    github: "https://github.com/Blenisj/Delta-Sync",
+    externalLabel: "Visit Senior Design Page",
   },
   {
     slug: "team-eval",
@@ -52,6 +61,8 @@ export const projects: Project[] = [
     technologies: ["JavaScript", "React", "CSS"],
     details:
       "Use this page to describe the project goals, your contribution, the technical decisions you made, and what you learned.",
+    externalUrl: "https://team-eval.cech.uc.edu/login",
+    externalLabel: "See site",
   },
   {
     slug: "second-person",
@@ -70,6 +81,10 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "Vite", "CSS"],
     details:
       "This project showcases my skills and serves as a central hub for my portfolio.",
+    //TODO Fill iun site url when published
+    externalUrl: "d",
+    github: "https://github.com/Blenisj/Portfolio",
+    externalLabel: "visit site (not sure what you expect)",
   },
 ];
 

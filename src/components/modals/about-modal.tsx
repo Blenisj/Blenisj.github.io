@@ -21,7 +21,7 @@ export const AboutModal = ({ item, onClose }: AboutModalProps) => {
     document.addEventListener("keydown", closeOnEscape);
     return () => document.removeEventListener("keydown", closeOnEscape);
   }, [onClose]);
-
+  //TODO add gradient edge to modal to make it more obvious
   const step = (offset: number) =>
     setSlide((current) => (current + offset + slides.length) % slides.length);
 

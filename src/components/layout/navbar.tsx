@@ -52,7 +52,7 @@ export const NavBar = () => {
                 href="#contact"
                 onClick={closeMenu}
               >
-                Get in touch
+                Contact
               </a>
             </div>
           </div>

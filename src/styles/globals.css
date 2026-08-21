@@ -76,12 +76,92 @@ body {
   color: var(--portfolio-muted);
 }
 
+.project-card-link .card {
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.project-image-button {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  cursor: zoom-in;
+}
+
+.project-image-button img {
+  transition: transform 250ms ease;
+}
+
+.project-image-button:hover img,
+.project-image-button:focus-visible img {
+  transform: scale(1.03);
+}
+
+.project-image-zoom-hint {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: inline-flex;
+  color: var(--portfolio-muted);
+  background: color-mix(in srgb, var(--portfolio-background) 70%, transparent);
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.project-image-button:hover .project-image-zoom-hint,
+.project-image-button:focus-visible .project-image-zoom-hint {
+  opacity: 1;
+}
+
+.project-card-link:hover .card,
+.project-card-link:focus-visible .card {
+  transform: translateY(-6px);
+  border-color: var(--portfolio-accent) !important;
+  box-shadow: 0 12px 28px rgb(0 0 0 / 45%);
+}
+
+.project-card-link:hover .portfolio-link,
+.project-card-link:focus-visible .portfolio-link {
+  color: var(--portfolio-accent);
+}
+
+.project-card-arrow {
+  transition: transform 200ms ease;
+}
+
+.project-card-link:hover .project-card-arrow,
+.project-card-link:focus-visible .project-card-arrow {
+  transform: translate(3px, -3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card-link .card,
+  .project-card-arrow,
+  .project-image-button img {
+    transition: none;
+    transform: none;
+  }
+}
+
 .portfolio-navbar {
   max-width: 800px;
   background-color: color-mix(
     in srgb,
     var(--portfolio-background) 75%,
     transparent
+  );
+}
+
+.portfolio-navbar .nav-link:hover,
+.portfolio-navbar .nav-link:focus,
+.portfolio-navbar .navbar-brand:hover,
+.portfolio-navbar .navbar-brand:focus {
+  color: color-mix(
+    in srgb,
+    var(--portfolio-muted) 55%,
+    var(--portfolio-background)
   );
 }
 

@@ -17,6 +17,7 @@ export const SkillsAndTools = () => (
               <div className="d-flex flex-wrap gap-2 mt-4">
                 {group.items.map((item) => (
                   <span
+                    //TODO: ad an icon for each item rather than text
                     className="badge rounded-pill border border-secondary px-3 py-2 portfolio-badge"
                     key={item}
                   >

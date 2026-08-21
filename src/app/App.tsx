@@ -44,8 +44,8 @@ export default function App() {
               Skills &amp; tools
             </h2>
             <p className="portfolio-copy lead mb-0">
-              The technologies and tools I use to build, test, and deliver
-              digital experiences.
+              The technologies and tools I am familiar with and have used in
+              personal and professional projects.
             </p>
           </div>
           <SkillsAndTools />
@@ -79,7 +79,7 @@ export default function App() {
               Projects
             </h2>
             <p className="portfolio-copy lead mb-0">
-              A selection of things I have designed, built, and shipped.
+              A selection of things I have, or am currently Developing.
             </p>
           </div>
           <Projects />
@@ -96,9 +96,9 @@ export default function App() {
               About me
             </h2>
             <p className="portfolio-copy lead mb-0">
-              Outside of work, these are some of the interests and activities
-              that keep me curious, creative, and connected to the world around
-              me.
+              To learn more about me and what I enjoy doing outside of software
+              development, <br />
+              click one of the images below.
             </p>
           </div>
           <About />

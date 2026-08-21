@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowLeft, ExternalLink, Maximize2, X } from "lucide-react";
 import { type Project } from "../../constants/portfolio.constants";
+import { withBase } from "../../utils/paths";
 
 type ProjectDetailsProps = {
   project: Project;
@@ -30,7 +31,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           <div className="col-lg-9">
             <a
               className="portfolio-link d-inline-flex align-items-center gap-2 mb-5"
-              href="/#projects"
+              href={withBase("#projects")}
             >
               <ArrowLeft size={17} aria-hidden="true" />
               Back to projects

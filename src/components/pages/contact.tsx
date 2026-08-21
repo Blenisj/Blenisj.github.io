@@ -1,11 +1,12 @@
 import { Download } from "lucide-react";
 import { contactLinks } from "../../constants/portfolio.constants";
+import { withBase } from "../../utils/paths";
 
 export const Contact = () => (
   <div className="d-flex flex-wrap justify-content-center gap-3">
     <a
       className="btn portfolio-primary rounded-pill px-4"
-      href="/Blenisjm_Resume.pdf"
+      href={withBase("Blenisjm_Resume.pdf")}
       download
     >
       <Download size={18} className="me-2" aria-hidden="true" />

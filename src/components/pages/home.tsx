@@ -14,7 +14,7 @@ export const Home = () => {
             />
           </div>
         </div>
-
+        sefs
         <div className="col-lg-7 home-load-copy">
           <p className="portfolio-kicker mb-3">Cincinnati, Ohio</p>
           <h1 id="home-heading" className="display-1 fw-bold lh-1 mb-0">

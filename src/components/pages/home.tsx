@@ -9,7 +9,7 @@ export const Home = () => {
           <div className="overflow-hidden border rounded-3 portfolio-surface">
             <img
               className="w-100 h-100 object-fit-cover"
-              src="/pf_image.JPG"
+              src="/IMG_7353.jpg"
               alt="Portrait of Jake Blenis"
             />
           </div>
